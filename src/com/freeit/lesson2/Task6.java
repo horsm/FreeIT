@@ -16,7 +16,7 @@ public class Task6 {
         if (numberOne > numberTwo) {
             System.out.println("Большее число: " + numberOne);
         } else if (numberOne < numberTwo) {
-                System.out.println("Большее число: " + numberTwo);
+            System.out.println("Большее число: " + numberTwo);
         } else {
             System.out.println("Числа одинаковые!");
         }
