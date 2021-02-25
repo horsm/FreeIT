@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 14)Напишите программу, определяющую сумму всех нечетных чисел от 1 до 99

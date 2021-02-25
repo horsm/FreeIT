@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 import java.util.Scanner;
 

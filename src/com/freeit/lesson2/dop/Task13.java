@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 13)Напишите программу вывода всех четных чисел от 2 до 100 включительно

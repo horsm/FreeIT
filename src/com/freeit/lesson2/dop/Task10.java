@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 10)Вычислить: 1+2+4+8+...+256

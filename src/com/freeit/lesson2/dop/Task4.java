@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 4) Даны 3 целых числа.

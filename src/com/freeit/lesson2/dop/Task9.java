@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 9)Одноклеточная амеба каждые 3 часа делится на 2 клетки.

@@ -1,4 +1,4 @@
-package com.freeit.lesson2;
+package com.freeit.lesson2.dop;
 
 /*
 8)Начав тренировки, спортсмен в первый день пробежал 10 км.
