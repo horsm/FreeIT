@@ -21,7 +21,6 @@ public class Task1 {
             System.out.println("Это " + (length - 1) + "-значное отрицательное число");
         } else {
             System.out.println("Это ноль!");
-
         }
     }
 }
