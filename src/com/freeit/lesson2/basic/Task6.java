@@ -1,5 +1,7 @@
 package com.freeit.lesson2.basic;
 
+import java.util.Random;
+
 /*
 Задание 6
 Создайте число. Определите, является ли число трехзначным. Определите, является
@@ -7,7 +9,8 @@ package com.freeit.lesson2.basic;
  */
 public class Task6 {
     public static void main(String[] args) {
-        int number = (int) (Math.random() * 1000);
+        Random rand = new Random();
+        int number =rand.nextInt(1000);
         System.out.println(number);
 
         if ((int) (Math.log10(number) + 1) == 3) {
