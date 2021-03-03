@@ -10,7 +10,6 @@ public class Task10 {
         long factorial = 1;
 
         for (int i = 10; i <= 15; i++) {
-            int n = i;
             int x = i;
 
             while(x != 0) {
@@ -21,7 +20,7 @@ public class Task10 {
                     x--;
                 }
             }
-            System.out.println("Факториал числа " + n + " = " + factorial);
+            System.out.println("Факториал числа " + i + " = " + factorial);
             factorial = 1;
         }
     }
