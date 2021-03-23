@@ -1,4 +1,4 @@
-package com.freeit.lesson5.TaskTime24;
+package com.freeit.lesson5.Task24Time;
 
 /*
 Создать класс и объекты описывающие промежуток времени.
