@@ -25,55 +25,68 @@ public class ATM {
         this.currency20 += currency20;
         this.currency50 += currency50;
         this.currency100 += currency100;
+        System.out.println("Банкомат пополнен следующими купюрами:" +
+                "\nноминал в 20 = " + currency20 +
+                "\nноминал в 50 = " + currency50 +
+                "\nноминал в 100 = " + currency100 + "." +
+                "\nНа общую сумму: " + (currency20 * 20 + currency50 * 50 + currency100 * 100));
     }
 
     public int findATMBalance() {
         return this.currency20 * 20 + this.currency50 * 50 + this.currency100 * 100;
     }
 
-    public void requestCash(int cash) {
-        boolean answer;
-        int curr100 = cash / 100;
-        int curr50 = (cash - curr100 * 100) / 50;
-        int curr20 = cash - curr100 * 100 - curr50 * 50;
-        int newCurr100 = 0;
-        int newCurr50 = 0;
-        int newCurr20 = 0;
+    public boolean requestCash(int cash) {
 
+        if (cash % 10 == 0) {
+            if (cash <= findATMBalance()) {
 
-        if (this.currency20 * 20 + this.currency50 * 50 + this.currency100 * 100 <= cash) {
-            System.out.println("Снятие валюты невозможно - недостаточно валюты в банкомате!");
-        } else if (this.currency20 * 20 + this.currency50 * 50 + this.currency100 * 100 - cash < 20) {
-            System.out.println("Извините, банкомат мелочь не выдаёт! ");
-        } else {
-            while (cash > 0) {
-                while (curr100 > 0) {
-                    cash -= curr100 * 100;
-                    curr100--;
+                for (int hundr = currency100; hundr >= 0; hundr--) {
+
+                    for (int fifty = currency50; fifty >= 0; fifty--) {
+
+                        int temp = cash - hundr * 100 - fifty * 50;
+
+                        if (temp % 20 == 0 && temp / 20 <= currency20 && temp >= 0) {
+                            currency100 -= hundr;
+                            currency50 -= fifty;
+                            currency20 -= temp / 20;
+                            System.out.println("Произведена выдача суммы: " + cash + " следующими купюрами: ");
+                            System.out.println("номиналом в 20: " + temp / 20);
+                            System.out.println("номиналом в 50: " + fifty);
+                            System.out.println("номиналом в 100: " + hundr);
+                            System.out.println(balance());
+                            return true;
+                        }
+                    }
                 }
-                while (curr50 > 0) {
-                    cash -= curr50 * 50;
-                    curr50--;
-                }
+                System.out.println("Банкомат не может вывести сумму " + cash);
+            } else {
+                System.out.println("В банкомате недостаточно средств");
             }
+
+        } else {
+            System.out.println("Банкомат мелочь не выдаёт. Имеются купюры номиналом: 20, 50, 100");
         }
+        return false;
+    }
 
-        }
-
-
-    @Override
-    public String toString() {
-        return "ATM{" +
-                "currency20 = " + currency20 +
-                ", currency50 = " + currency50 +
-                ", currency100 = " + currency100 +
-                '}';
+    public String balance() {
+        return "Банкомат имеет следуюшие купюры:" +
+                "\nноминал в 20 = " + currency20 +
+                "\nноминал в 50 = " + currency50 +
+                "\nноминал в 100 = " + currency100 + "." +
+                "\nИтоговый баланс: " + findATMBalance();
     }
 
     public static void main(String[] args) {
         ATM atm = new ATM(0, 1, 2);
-        System.out.println(atm.toString());
-        atm.requestCash(163);
+        System.out.println(atm.balance());
+        System.out.println("--------------------------------");
+        atm.addCurrency(1, 1, 1);
+        System.out.println("--------------------------------");
+        System.out.println(atm.balance());
+        System.out.println("--------------------------------");
+        System.out.println("Выдача запрошенной суммы: " + atm.requestCash(120));
     }
-
 }
