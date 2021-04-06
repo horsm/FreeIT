@@ -9,7 +9,7 @@ package com.freeit.lesson7;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Task29ListRratings {
+public class Task29ListRatings {
     public static void main(String[] args) {
         ArrayList <Integer> listOfRatings = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
