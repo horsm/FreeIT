@@ -17,7 +17,7 @@ public class Task35WritingNumbers {
     public static void main(String[] args) {
 
         // Запись в файл
-        writiToFile ();
+        writiToFile();
 
         // Чтение из файла
         readFromFile();
