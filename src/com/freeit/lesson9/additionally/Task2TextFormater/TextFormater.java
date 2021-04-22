@@ -26,16 +26,14 @@ public class TextFormater {
         String inputFileName = "src\\com\\freeit\\lesson9\\additionally\\Task2TextFormater\\task2in.txt";
         String outputFileName = "src\\com\\freeit\\lesson9\\additionally\\Task2TextFormater\\task2out.txt";
 
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFileName));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFileName));
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFileName));
+             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFileName))){
 
             String temp;
             StringBuilder sb = new StringBuilder();
             while ((temp = bufferedReader.readLine()) != null) {
                 sb.append(temp.trim());
             }
-            bufferedReader.close();
 
             String text = new String(sb);
             StringTokenizer st = new StringTokenizer(text, ".!?");
@@ -45,7 +43,6 @@ public class TextFormater {
                     bufferedWriter.write(tempStr + ".");
                 }
             }
-            bufferedWriter.close();
 
         } catch (FileNotFoundException e) {
             System.err.println("Ошибка. Файл не найден!");
