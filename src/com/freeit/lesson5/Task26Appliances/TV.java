@@ -1,16 +1,27 @@
 package com.freeit.lesson5.Task26Appliances;
 
 public class TV extends HomeAppliances {
-    public TV(String name) {
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public TV(String name, String type) {
         super(name);
+        setType(type);
     }
 
     @Override
-    public void turn(Boolean switcher) {
+    public String turn(Boolean switcher) {
         if (switcher) {
-            System.out.println("Телевизор включен!");
+            return "Телевизор включен!";
         } else {
-            System.out.println("Телевизор выключен!");
+           return "Телевизор выключен!";
         }
     }
 }

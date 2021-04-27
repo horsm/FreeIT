@@ -1,16 +1,27 @@
 package com.freeit.lesson5.Task26Appliances;
 
 public class WashingMachine extends HomeAppliances{
-    public WashingMachine(String name) {
+    private int power;
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public WashingMachine(String name, int power) {
         super(name);
+        setPower(power);
     }
 
     @Override
-    public void turn(Boolean switcher) {
+    public String turn(Boolean switcher) {
         if (switcher) {
-            System.out.println("Стиральная машина включена!");
+            return "Стиральная машина включена!";
         } else {
-            System.out.println("Стиральная машина выключена!");
+            return "Стиральная машина выключена!";
         }
     }
 }

@@ -8,15 +8,16 @@ package com.freeit.lesson5.Task26Appliances;
 
 public class Appliances {
     public static void main(String[] args) {
-        Fridge fridge = new Fridge("Атлант");
-        System.out.print(fridge.name + " - " );
-        fridge.turn(true);
-        WashingMachine washingMachine = new WashingMachine("Samsung");
-        System.out.print(washingMachine.name + " - ");
-        washingMachine.turn(false);
-        TV tv = new TV("LG");
-        System.out.print(tv.name + " - ");
-        tv.turn(true);
+        Fridge fridge = new Fridge("Атлант", "черный");
+        System.out.println("Холодильник: " + fridge.name + ", цвет: " + fridge.getColor() +
+                ". Состояние: " + fridge.turn(false));
 
+        WashingMachine washingMachine = new WashingMachine("Samsung", 1000);
+        System.out.println("Стиральная машина: " + washingMachine.name + ", мощность: " + washingMachine.getPower() + " Вт." +
+                " Состояние: " + washingMachine.turn(true));
+
+        TV tv = new TV("LG", "ЖК");
+        System.out.println("Телевизор: " + tv.name + ", тип: " + tv.getType() +
+                ". Состояние: " + tv.turn(false));
     }
 }
