@@ -1,10 +1,15 @@
 package com.freeit.lesson5.Task27BankCards;
 
 public class MasterCard extends DebitCard {
-    int money;
+    private int money;
 
     protected MasterCard(String nameHolder, String number, int cvv) {
         super(nameHolder, number, cvv);
+    }
+
+    @Override
+    String getNumberCard() {
+        return number;
     }
 
     @Override

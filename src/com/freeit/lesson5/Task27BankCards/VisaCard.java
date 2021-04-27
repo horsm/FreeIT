@@ -1,7 +1,12 @@
 package com.freeit.lesson5.Task27BankCards;
 
 public class VisaCard extends CreditCard{
-    int money;
+    private int money;
+
+    @Override
+    public int getMoneyWithProcent(int money, int procent) {
+        return money + (money * procent)/100 ;
+    }
 
     protected VisaCard(String nameHolder, String number, int cvv) {
         super(nameHolder, number, cvv);
