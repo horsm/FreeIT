@@ -11,12 +11,14 @@ package com.freeit.lesson5.Task24Time;
  */
 
 public class Time {
-    private int seconds;
-    private int minutes;
-    private int hours;
+    private final int seconds;
+    private final int minutes;
+    private final int hours;
 
     public Time(int seconds) {
         this.seconds = seconds;
+        this.minutes = 0;
+        this.hours = 0;
     }
 
     public Time(int hours, int minutes, int seconds) {
@@ -48,7 +50,7 @@ public class Time {
     }
 
     public static void main(String[] args) {
-        Time timeOne = new Time(10_000);
+        Time timeOne = new Time(7686578);
         Time timeTwo = new Time(16,15,46);
         System.out.println("Первое время в секундах: " + timeOne.totalSeconds());
         System.out.println("Второе время в секундах: " + timeTwo.totalSeconds());
