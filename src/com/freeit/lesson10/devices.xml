@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Devices>
+    <Device id = "dev_0001">
+        <Name>SSD GeIL Zenith R3 256GB GZ25R3-256G</Name>
+        <Origin>China</Origin>
+        <Price>102,26</Price>
+        <Type>
+            <Peripheral>false</Peripheral>
+            <PowerConsumption>10</PowerConsumption>
+            <AvailabilityCooler>false</AvailabilityCooler>
+            <GroupComponents>Устройства ввода-вывода</GroupComponents>
+            <Ports>SATA 3.0</Ports>
+        </Type>
+        <Critical>true</Critical>
+    </Device>
+
+    <Device id = "dev_0002">
+        <Name>IP-камера Xiaomi Home Security Camera 360 1080p</Name>
+        <Origin>Italy</Origin>
+        <Price>143,10</Price>
+        <Type>
+            <Peripheral>true</Peripheral>
+            <PowerConsumption>5</PowerConsumption>
+            <AvailabilityCooler>false</AvailabilityCooler>
+            <GroupComponents>Мультимедийное</GroupComponents>
+            <Ports>беспроводной</Ports>
+        </Type>
+        <Critical>false</Critical>
+    </Device>
+
+    <Device id = "dev_0003">
+        <Name>Монитор Samsung C24RG50FQI</Name>
+        <Origin>Polishh</Origin>
+        <Price>492,21</Price>
+        <Type>
+            <Peripheral>true</Peripheral>
+            <PowerConsumption>100</PowerConsumption>
+            <AvailabilityCooler>false</AvailabilityCooler>
+            <GroupComponents>Мультимедийное</GroupComponents>
+            <Ports>HDMI</Ports>
+        </Type>
+        <Critical>true</Critical>
+    </Device>
+</Devices>
